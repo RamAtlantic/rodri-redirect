@@ -4,9 +4,9 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Redirect MoneyMaker',
-  description: 'Created with atlantics.dev',
-  generator: 'atlantics.dev',
+  title: 'Redirect ORO PURO',
+  description: 'Redirect ORO PURO',
+  generator: 'ORO PURO',
 }
 
 export default function RootLayout({
