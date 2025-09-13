@@ -2,6 +2,12 @@
 
 import { useEffect, useState } from "react"
 
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void
+  }
+}
+
 export default function WhatsAppRedirect() {
   const [dots, setDots] = useState("")
 
@@ -11,6 +17,9 @@ export default function WhatsAppRedirect() {
     }, 500)
 
     const redirectTimer = setTimeout(() => {
+  if (typeof window.fbq === "function") {
+        window.fbq("trackCustom", "ClickWhatsApp")
+      }
       // Cambia este número por el tuyo
       const phoneNumber = process.env.NEXT_PUBLIC_API_NUMBER // Formato: código país + número sin espacios ni símbolos
       const message = "Hola Daniela! Quiero registrarme en ORO PURO"
