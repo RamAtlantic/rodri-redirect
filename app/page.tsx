@@ -19,7 +19,7 @@ export default function WhatsAppRedirect() {
     const redirectTimer = setTimeout(() => {
       if (typeof window.fbq === "function") {
         window.fbq("track", "Purchase", {
-          value: 10, // Cambia este valor por el monto real de la compra
+          value: 2, // Cambia este valor por el monto real de la compra
           currency: "USD" // Cambia la moneda según corresponda
         });
       }
