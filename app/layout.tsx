@@ -60,18 +60,18 @@ html {
             `,
           }}
         />
-     <Script
-  id="lead-event"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
+        <Script
+          id="lead-event"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
       document.addEventListener('DOMContentLoaded', function() {
         const button = document.getElementById("cta-button");
         if (button) {
           console.log("Botón CTA encontrado");
           button.addEventListener("click", function () {
             if (typeof window.fbq === 'function') {
-              window.fbq("trackCustom", "ClickWhatsApp");
+              window.fbq("track", "Purchase");
             }
           });
         } else {
@@ -79,8 +79,8 @@ html {
         }
       });
     `,
-  }}
-/>
+          }}
+        />
         <noscript>
           <img
             height="1"
